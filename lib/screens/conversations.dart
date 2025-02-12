@@ -163,7 +163,7 @@ class ConversationsState extends State<Conversations> {
                 padding: const EdgeInsets.only(right: 20),
                 child: Column(
                   children: <Widget>[
-                    Container(
+                    SizedBox(
                       width: 60,
                       height: 60,
                       child: Stack(
@@ -259,7 +259,7 @@ class ConversationsState extends State<Conversations> {
             padding: const EdgeInsets.only(bottom: 20),
             child: Row(
               children: <Widget>[
-                Container(
+                SizedBox(
                   width: 60,
                   height: 60,
                   child: Stack(
