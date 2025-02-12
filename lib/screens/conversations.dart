@@ -361,66 +361,74 @@ class ConversationsState extends State<Conversations> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
-          child: ListView(
-            children: [
-              // Header Row for "Chats"
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: <Widget>[
-                  Container(
-                    width: 40,
-                    height: 40,
-                    decoration: const BoxDecoration(
-                      shape: BoxShape.circle,
-                      image: DecorationImage(
-                        image: NetworkImage(
-                          "https://randomuser.me/api/portraits/men/11.jpg",
+        child: RefreshIndicator(
+          onRefresh: _refreshConversations,
+          child: Container(
+            padding: const EdgeInsets.only(left: 20, right: 20, top: 15),
+            child: ListView(
+              children: [
+                // Header Row for "Chats"
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Container(
+                      width: 40,
+                      height: 40,
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        image: DecorationImage(
+                          image: NetworkImage(
+                            "https://randomuser.me/api/portraits/men/11.jpg",
+                          ),
+                          fit: BoxFit.cover,
                         ),
-                        fit: BoxFit.cover,
                       ),
                     ),
-                  ),
-                  const Text(
-                    "Chats",
-                    style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
-                  ),
-                  const Icon(Icons.edit)
-                ],
-              ),
-              const SizedBox(height: 15),
-              // Search bar
-              Container(
-                width: double.infinity,
-                height: 40,
-                decoration: BoxDecoration(
-                  color: const Color(0xFFe9eaec),
-                  borderRadius: BorderRadius.circular(15),
-                ),
-                child: TextField(
-                  cursorColor: const Color(0xFF000000),
-                  controller: _searchController,
-                  decoration: InputDecoration(
-                    prefixIcon: Icon(
-                      Icons.search,
-                      color: const Color(0xFF000000).withOpacity(0.5),
+                    const Text(
+                      "Chats",
+                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
-                    hintText: "Search",
-                    border: InputBorder.none,
+                    const Icon(Icons.edit)
+                  ],
+                ),
+                const SizedBox(height: 15),
+                // Search bar
+                Container(
+                  width: double.infinity,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: const Color(0xFFe9eaec),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: TextField(
+                    cursorColor: const Color(0xFF000000),
+                    controller: _searchController,
+                    decoration: InputDecoration(
+                      prefixIcon: Icon(
+                        Icons.search,
+                        color: const Color(0xFF000000).withOpacity(0.5),
+                      ),
+                      hintText: "Search",
+                      border: InputBorder.none,
+                    ),
                   ),
                 ),
-              ),
-              const SizedBox(height: 20),
-              // Stories section
-              _stories(),
-              const SizedBox(height: 20),
-              // Conversations section
-              _conversations(context),
-            ],
+                const SizedBox(height: 20),
+                // Stories section
+                _stories(),
+                const SizedBox(height: 20),
+                // Conversations section
+                _conversations(context),
+              ],
+            ),
           ),
         ),
       ),
     );
+  }
+
+  Future<void> _refreshConversations() async {
+    // Add your refresh logic here
+    await Future.delayed(Duration(seconds: 2));
   }
 }

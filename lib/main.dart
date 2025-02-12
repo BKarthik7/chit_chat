@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:chit_chat/screens/conversations.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,13 +11,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Messenger Demo',
-      debugShowCheckedModeBanner: false,
+      title: 'Chit Chat',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.blue),
-        visualDensity: VisualDensity.adaptivePlatformDensity,
+        primarySwatch: Colors.blue,
+        brightness: Brightness.light,
       ),
-      home: const Conversations(),
+      darkTheme: ThemeData(
+        brightness: Brightness.dark,
+      ),
+      themeMode: ThemeMode.system,
+      home: Conversations(),
     );
   }
 }
