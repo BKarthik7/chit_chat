@@ -386,7 +386,8 @@ class ConversationsState extends State<Conversations> {
                     ),
                     const Text(
                       "Chats",
-                      style: TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
+                      style:
+                          TextStyle(fontSize: 22, fontWeight: FontWeight.bold),
                     ),
                     const Icon(Icons.edit)
                   ],
