@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:chit_chat/screens/conversations.dart';
+import 'package:chit_chat/screens/conversations_screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         brightness: Brightness.dark,
       ),
       themeMode: ThemeMode.system,
-      home: Conversations(),
+      home: const ConversationsScreen(),
     );
   }
 }
