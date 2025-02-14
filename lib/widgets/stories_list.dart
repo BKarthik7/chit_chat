@@ -16,7 +16,7 @@ class StoriesList extends StatelessWidget {
         child: Row(
           children: <Widget>[
             _buildYourStory(),
-            ...stories.map((story) => _buildStoryItem(story)).toList(),
+            ...stories.map((story) => _buildStoryItem(story)),
           ],
         ),
       ),

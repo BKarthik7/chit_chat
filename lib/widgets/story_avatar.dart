@@ -6,11 +6,11 @@ class StoryAvatar extends StatelessWidget {
   final bool isOnline;
 
   const StoryAvatar({
-    Key? key,
+    super.key,
     required this.imageUrl,
     required this.hasStory,
     required this.isOnline,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
