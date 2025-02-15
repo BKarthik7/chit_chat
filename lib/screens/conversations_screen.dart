@@ -68,7 +68,7 @@ class ConversationsScreenState extends State<ConversationsScreen> {
             shape: BoxShape.circle,
             image: DecorationImage(
               image: NetworkImage(
-                "https://randomuser.me/api/portraits/men/11.jpg",
+                "https://randomuser.me/api/portraits/men/31.jpg",
               ),
               fit: BoxFit.cover,
             ),

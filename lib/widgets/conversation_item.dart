@@ -40,7 +40,7 @@ class ConversationItem extends StatelessWidget {
                     "${conversation.message} - ${conversation.time}",
                     style: TextStyle(
                       fontSize: 15,
-                      color: const Color(0xFF000000).withOpacity(0.7),
+                      color: const Color.fromARGB(255, 180, 149, 149).withOpacity(0.7),
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),

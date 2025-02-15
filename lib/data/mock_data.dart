@@ -92,7 +92,7 @@ class MockData {
       },
       {
         "name": "Lucy",
-        "imageUrl": "https://randomuser.me/api/portraits/women/56.jpg",
+        "imageUrl": "https://randomuser.me/api/portraits/women/58.jpg",
         "isOnline": false,
         "hasStory": false,
         "message": "Hahahahahaha",
@@ -100,7 +100,7 @@ class MockData {
       },
       {
         "name": "Emma",
-        "imageUrl": "https://randomuser.me/api/portraits/women/56.jpg",
+        "imageUrl": "https://randomuser.me/api/portraits/women/57.jpg",
         "isOnline": false,
         "hasStory": false,
         "message": "Been a while!",
